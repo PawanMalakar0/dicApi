@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1vw;
+}
+body,html{
+    height:100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e7cccc;
+    
+}
+#main{
+    height: 100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main #cen{
+    min-height: 50%;
+    width: 50%;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    gap: 15vh;
+    align-items: center;
+
+}
+#cen form{
+    width: 70%;
+    height: 10vh;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form input{
+    width: 50%;
+    height: 4vh;
+padding: 10px;
+margin: 10px;
+}
+form button{
+    height: 5vh;
+    width: 30%;
+    background-color: rgb(68, 255, 0);
+    font-size: 1vw;
+   
+}
+#cen p{
+    width: 50%;
+    height: 30vh;
+    font-size: 1.5rem;
+    font-weight: 300;
+
+}
+#cen #forExample{
+   width: 50%;
+   height: 200px;
+   margin-top: -140px;
+   font-size: 1.5rem;
+
+   margin-bottom: 100px;
+   word-spacing: 1.5;
+   line-height:1.2;
+   font-weight: 300;
+
+}
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+    form input{
+        width: 90%;
+        height: 4vh;
+    padding: 30px;
+    margin: 10px;
+    font-size: 2.8vw;
+    }
+    form button{
+        height: 30vh;
+        width: 60%;
+        background-color: rgb(55, 197, 3);
+        font-size: 1vw;
+    padding: 20px;
+    font-size: 2.5vw;
+margin-bottom: 20vh;
+       
+    }
+    #cen p{
+        width: 90%;
+        height: 50vh;
+        font-size: 3.0rem;
+        font-weight: 300;
+    
+    }
+    #cen #forExample{
+        width: 90%;
+        height: 12vh;
+        font-size: 3.0rem;
+        font-weight: 300;
+
+     
+     
+     }
+
+  }

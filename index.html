@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dictionary App -Api</title>
+</head>
+<body>
+    <div id="main">
+        <div id="cen">
+        <form action="">
+            <input type="text" id="text">
+            <button id="btn">Search</button>
+        </form>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis maxime eligendi ea distinctio magnam libero asperiores ad quia quo enim quae, maiores velit praesentium vitae reiciendis? Quam veritatis harum architecto?</p>
+        <h3 id="forExample">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur ex placeat ab!</h3>
+        
+        </div>
+    </div>
+    <script>
+      
+
+let btn = document.querySelector("#btn");
+
+const url = "https://api.dictionaryapi.dev/api/v2/entries/en/"
+let para = document.querySelector("p")
+let fE = document.querySelector("#forExample")
+
+para.textContent = ''
+    fE.textContent = ''
+async function getDict(dt) {
+    let res = await fetch(url + dt);
+    let data = await res.json();
+    para.textContent = `${data[0].meanings[0].definitions[0].definition}`;
+    fE.textContent = `${data[0].meanings[0].definitions[1].definition}`;
+    console.log(data[0].meanings[0])
+}
+
+btn.addEventListener("click", (e) => {
+    e.preventDefault()
+    
+    let dt =  document.querySelector("#text").value;
+    
+    getDict(dt);
+});
+
+
+    </script> 
+</body>
+</html>
